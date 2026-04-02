@@ -33,6 +33,9 @@
             txtID = new TextBox();
             txtPW = new TextBox();
             lblErrorMsg = new Label();
+            btnIDclear = new Button();
+            btnPWclear = new Button();
+            btnPWcheck = new Button();
             SuspendLayout();
             // 
             // btnLogin
@@ -98,12 +101,53 @@
             lblErrorMsg.Text = "아이디 또는 비밀번호가 잘못 되었습니다.";
             lblErrorMsg.Visible = false;
             // 
+            // btnIDclear
+            // 
+            btnIDclear.BackColor = SystemColors.ControlDark;
+            btnIDclear.Location = new Point(586, 161);
+            btnIDclear.Name = "btnIDclear";
+            btnIDclear.Size = new Size(39, 34);
+            btnIDclear.TabIndex = 5;
+            btnIDclear.Text = "X";
+            btnIDclear.UseVisualStyleBackColor = false;
+            btnIDclear.Click += btnIDclear_Click;
+            // 
+            // btnPWclear
+            // 
+            btnPWclear.BackColor = SystemColors.ControlDark;
+            btnPWclear.Location = new Point(586, 246);
+            btnPWclear.Name = "btnPWclear";
+            btnPWclear.Size = new Size(39, 34);
+            btnPWclear.TabIndex = 6;
+            btnPWclear.Text = "X";
+            btnPWclear.UseVisualStyleBackColor = false;
+            btnPWclear.Click += btnPWclear_Click;
+            // 
+            // btnPWcheck
+            // 
+            btnPWcheck.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnPWcheck.BackColor = SystemColors.ActiveCaptionText;
+            btnPWcheck.FlatStyle = FlatStyle.System;
+            btnPWcheck.Font = new Font("맑은 고딕", 10F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            btnPWcheck.ForeColor = SystemColors.ActiveCaptionText;
+            btnPWcheck.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPWcheck.Location = new Point(466, 300);
+            btnPWcheck.Name = "btnPWcheck";
+            btnPWcheck.Size = new Size(159, 34);
+            btnPWcheck.TabIndex = 7;
+            btnPWcheck.Text = "패스워드 확인";
+            btnPWcheck.UseVisualStyleBackColor = false;
+            btnPWcheck.Click += btnPWcheck_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(672, 450);
+            Controls.Add(btnPWcheck);
+            Controls.Add(btnPWclear);
+            Controls.Add(btnIDclear);
             Controls.Add(lblErrorMsg);
             Controls.Add(txtPW);
             Controls.Add(txtID);
@@ -123,5 +167,8 @@
         private TextBox txtID;
         private TextBox txtPW;
         private Label lblErrorMsg;
+        private Button btnIDclear;
+        private Button btnPWclear;
+        private Button btnPWcheck;
     }
 }
